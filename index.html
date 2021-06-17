@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Multiplicação</title>
+</head>
+<body>
+
+ <header>
+        <h1>Multiplication Table</h1>
+</header>
+
+
+
+    <script>
+        let multiplyTable = (n) => { 
+        
+    
+            let arr = [];
+            for (let i = 0; i<=n; i++){
+                let line = []
+                    for (let j = 0; j<=n; j++){
+                        line.push(j*i)
+                    }
+                    arr.push(line)
+            }
+            for (let i = 0; i<arr.length; i++){ 
+
+            }
+            //console.log(arr)
+        
+           
+            console.table(arr)
+    }
+
+    multiplyTable(10)
+    </script>
+
+</body>
+</html>
+
