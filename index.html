@@ -5,19 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela de Multiplicação</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
- <header>
-        <h1>Multiplication Table</h1>
-</header>
-
-
-
-    <script>
-        let multiplyTable = (n) => { 
-        
     
+     <div>
+        <h1>TABELA DE MULTIPLICAÇÃO</h1>
+        <p>ABRA O CONSOLE</p>
+     </div>
+<div id="events">
+    <div>
+        <input class = "inputBox"
+               type="number"
+               id="value" 
+               name="name" 
+               placeholder="0000">
+
+        <input class = "inputBtn" 
+               type="submit" 
+               id="submit" 
+               value="Calcular" 
+               onclick="multiplyTable()">
+    </div>
+</div>
+    <script>
+
+let capturing = document.querySelector('#value');
+let number = capturing.value;
+
+const submite = document.querySelector('#submit');
+submite.addEventListener('click', () =>{
+multiplyTable(capturing.value);
+})
+    
+
+//FUNÇÃO QUE EU QUERO RODAR NO CONSOLE
+            function multiplyTable (n) {   
             let arr = [];
             for (let i = 0; i<=n; i++){
                 let line = []
@@ -26,16 +53,9 @@
                     }
                     arr.push(line)
             }
-            for (let i = 0; i<arr.length; i++){ 
-
-            }
-            //console.log(arr)
-        
-           
             console.table(arr)
     }
-
-    multiplyTable(10)
+//    multiplyTable(10)
     </script>
 
 </body>
